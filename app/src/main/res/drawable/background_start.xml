@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#2BB673">
-        //#4 Start Screen Gradient Minor Changes
+    <solid android:color="@color/start_color_home">
+
 
     </solid>
     <gradient
-        android:startColor="#f49e42"
-        android:endColor="#F4C84D"
+        android:startColor="@color/start_color_home"
+        android:endColor="@color/end_color_home"
         android:angle="45"/>
     <padding android:left="6dp"
         android:top="6dp"

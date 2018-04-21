@@ -2,4 +2,16 @@
     <string name="app_name">tBuddy</string>
     <string name="logo">Official Logo</string>
     <string name="button_001">Enter</string>
+    <string name="email">"  Email"</string>
+    <string name="pass">"   Password"</string>
+    <string name="slogo">Small Logo</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="new_user">"New User ?"</string>
+    <string name="w_r_u">Who are You..?</string>
+    <string name="stud">Student</string>
+    <string name="facu">Faculty</string>
+    <string name="submit">Submit</string>
+    <string name="stud_logo">Student Logo</string>
+    <string name="facu_logo">Faculty Logo</string>
 </resources>
