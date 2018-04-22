@@ -14,11 +14,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Animation q = AnimationUtils.loadAnimation(MainActivity.this, R.anim.frombottom);
+        findViewById(R.id.imageView).setAnimation(q);
         findViewById(R.id.to_login).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent logscr= new Intent(MainActivity.this,login.class);
+                Intent logscr = new Intent(MainActivity.this, login.class);
+
                 startActivity(logscr);
+
             }
         });
     }

@@ -3,7 +3,7 @@
     <string name="logo">Official Logo</string>
     <string name="button_001">Enter</string>
     <string name="email">"  Email"</string>
-    <string name="pass">"   Password"</string>
+    <string name="pass">" Password"</string>
     <string name="slogo">Small Logo</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
@@ -14,4 +14,9 @@
     <string name="submit">Submit</string>
     <string name="stud_logo">Student Logo</string>
     <string name="facu_logo">Faculty Logo</string>
+    <string name="stud_name">"   Name"</string>
+    <string name="stud_num">"   Mobile Number"</string>
+    <string name="stud_mail">"   Email"</string>
+    <string name="stud_pass">"   Password"</string>
+    <string name="round_button">"Round Button"</string>
 </resources>
