@@ -3,13 +3,12 @@
     <string-array name="university_name">
         <item> Select University</item>
         <item>Amrita Vishwa Vidyapeetham</item>
-        <item>Anna University</item>
         <item>APJ Abdul Kalam Technological University</item>
         <item>Birla Institute of Technology and Science</item>
         <item>Cochin University of Science and Technology</item>
         <item>Indian Institute of Technology</item>
         <item>National Institute Of Technology</item>
-        <item>SRM Institute of Science and Technology</item>
+        <item>SRM University</item>
         <item>VIT University</item>
 
     </string-array>

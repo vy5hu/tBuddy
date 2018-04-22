@@ -13,14 +13,14 @@ public class stud_profile_info_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stud_profile_info_2);
-        final Spinner spinner = (Spinner)findViewById(R.id.spinner2);
-        final Spinner college=findViewById(R.id.spinner1);
+        final Spinner spinner = (Spinner) findViewById(R.id.spinner2);
+        final Spinner college = findViewById(R.id.spinner1);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String text = spinner.getSelectedItem().toString();
-                if(text.equals("APJ Abdul Kalam Technological University")){
-                    String[] array = {"Select College","Adi Shankara Institute Of Engineering And Tech ( ASI )",
+                if (text.equals("APJ Abdul Kalam Technological University")) {
+                    String[] array = {"Select College", "Adi Shankara Institute Of Engineering And Tech ( ASI )",
                             "Al Azhar College Of Engineering And Technology ( Aae )",
                             "Al-Ameen Engineering College ( Aap )",
                             "Albertian Institute Of Science And Technology, Kalamassery, Kochi ( Aik )",
@@ -159,11 +159,99 @@ public class stud_profile_info_2 extends AppCompatActivity {
                             "Viswajyothi College Of Engineering And Technology ( Vjc )",
                             "(YCE) Younus College Of Engineering And Technology ",
                             "(YCW) Younus College Of Engineering For Women, Thalachira P O, Kottarakkara, Kollam. ",
-                            "Younus Institute Of Technology, Kannanaloor ( Yck )",};
-                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this,   android.R.layout.simple_spinner_item, array);
+                            "Younus Institute Of Technology, Kannanaloor ( Yck )"};
+                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
                     spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
                     college.setAdapter(spinnerArrayAdapter);
 
+
+                } else if (text.equals("Amrita Vishwa Vidyapeetham")) {
+                    String[] array = {"Select College", "Amrita SOE, Amritapuri", "Amrita SOE, Bangalore", "Amrita SOE, Coimbatore"};
+                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
+                    spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+                    college.setAdapter(spinnerArrayAdapter);
+                } else if (text.equals("Birla Institute of Technology and Science")) {
+                    String[] array = {"Select College", "BITS Goa", "BITS Hyderabad", "BITS Pilani"};
+                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
+                    spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+                    college.setAdapter(spinnerArrayAdapter);
+                } else if (text.equals("Cochin University of Science and Technology")) {
+                    String[] array = {"Select College", "Kuttanad Campus", "School Of Engineering,CUSAT"};
+                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
+                    spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+                    college.setAdapter(spinnerArrayAdapter);
+                } else if (text.equals("Indian Institute of Technology")) {
+                    String[] array = {"Select College", "IIT Bhilai",
+                            "IIT Bhubaneswar",
+                            "IIT Bombay",
+                            "IIT Delhi",
+                            "IIT Dhanbad(ISM)",
+                            "IIT Dharwad",
+                            "IIT Gandhinagar",
+                            "IIT Goa",
+                            "IIT Guwahati",
+                            "IIT Hyderabad",
+                            "IIT Indore",
+                            "IIT Jammu",
+                            "IIT Jodhpur",
+                            "IIT Kanpur",
+                            "IIT Kharagpur",
+                            "IIT Madras",
+                            "IIT Mandi",
+                            "IIT Palakkad",
+                            "IIT Patna",
+                            "IIT Roorkee",
+                            "IIT Ropar",
+                            "IIT Tirupati",
+                            "IIT Varanasi(BHU)"};
+                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
+                    spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+                    college.setAdapter(spinnerArrayAdapter);
+                } else if (text.equals("National Institute Of Technology")) {
+                    String[] array = {"Select College", "NIT Agartala",
+                            "NIT Allahabad ",
+                            "NIT Arunachal Pradesh ",
+                            "NIT Bhopal ",
+                            "NIT Calicut ",
+                            "NIT Delhi ",
+                            "NIT Durgapur ",
+                            "NIT Goa ",
+                            "NIT Hamirpur ",
+                            "NIT Jaipur ",
+                            "NIT Jalandhar ",
+                            "NIT Jamshedpur ",
+                            "NIT Kurukshetra ",
+                            "NIT Manipur ",
+                            "NIT Meghalaya ",
+                            "NIT Mizoram ",
+                            "NIT Nagaland ",
+                            "NIT Nagpur ",
+                            "NIT Patna ",
+                            "NIT Puducherry ",
+                            "NIT Raipur ",
+                            "NIT Rourkela ",
+                            "NIT Silchar ",
+                            "NIT Sikkim ",
+                            "NIT Srinagar ",
+                            "NIT Surat ",
+                            "NIT Karnataka ",
+                            "NIT Tadepalligudem ",
+                            "NIT Trichy ",
+                            "NIT Uttarakhand ",
+                            "NIT Warangal"};
+                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
+                    spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+                    college.setAdapter(spinnerArrayAdapter);
+                }else if (text.equals("VIT University")) {
+                    String[] array = {"Select College", "Amaravati Campus", "Bhopal Campus","Vellore Campus"};
+                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
+                    spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+                    college.setAdapter(spinnerArrayAdapter);
+                }else if (text.equals("SRM University")) {
+                    String[] array = {"Select College", "Amaravati Campus", "Chennai Campus","Haryana Campus","Sikkim Campus"};
+                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
+                    spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
+                    college.setAdapter(spinnerArrayAdapter);
                 }
             }
 
