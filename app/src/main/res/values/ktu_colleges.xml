@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="college_name">
-        <item> Select College</item>
+        <item>"Select College"</item>
         <item> Select University First</item>
 
     </string-array>

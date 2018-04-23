@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="branch_name">
-        <item> Select Branch</item>
+        <item>"Select Branch"</item>
         <item>(AO) Aeronautical Engineering</item>
         <item>(AEI) Applied Electronics and Instrumentation</item>
         <item>(AU) Automobile Engineering</item>

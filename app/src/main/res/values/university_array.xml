@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="university_name">
-        <item> Select University</item>
+        <item>"Select University"</item>
         <item>Amrita Vishwa Vidyapeetham</item>
         <item>APJ Abdul Kalam Technological University</item>
         <item>Birla Institute of Technology and Science</item>

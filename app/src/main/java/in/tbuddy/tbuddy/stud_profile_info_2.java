@@ -7,23 +7,63 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class stud_profile_info_2 extends AppCompatActivity {
+    int counter=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stud_profile_info_2);
+        final Spinner spinner = (Spinner) findViewById(R.id.spinner2);
+        final Spinner college = findViewById(R.id.spinner1);
+        final Spinner branch= findViewById(R.id.spinner);
+
+        final String stud_university=spinner.getSelectedItem().toString();
+        final String stud_college=college.getSelectedItem().toString();
+        final String stud_branch=branch.getSelectedItem().toString();
+
+
+
         findViewById(R.id.from_profile_info_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent pq=new Intent(stud_profile_info_2.this, stud_gender.class);
-                startActivity(pq);
-                overridePendingTransition(R.anim.slidein_right, R.anim.slideout_left);
+
+                if(counter==0){
+                    Toast.makeText(stud_profile_info_2.this, "Select All Fields", Toast.LENGTH_SHORT).show();
+                }else if(counter>=3){
+                    startActivity(pq);
+                    overridePendingTransition(R.anim.slidein_right, R.anim.slideout_left);
+                }
+
+
             }
         });
-        final Spinner spinner = (Spinner) findViewById(R.id.spinner2);
-        final Spinner college = findViewById(R.id.spinner1);
+        college.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                counter++;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        branch.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                counter++;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -169,6 +209,7 @@ public class stud_profile_info_2 extends AppCompatActivity {
                             "(YCE) Younus College Of Engineering And Technology ",
                             "(YCW) Younus College Of Engineering For Women, Thalachira P O, Kottarakkara, Kollam. ",
                             "Younus Institute Of Technology, Kannanaloor ( Yck )"};
+                    counter++;
                     ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
                     spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
                     college.setAdapter(spinnerArrayAdapter);
@@ -179,16 +220,19 @@ public class stud_profile_info_2 extends AppCompatActivity {
                     ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
                     spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
                     college.setAdapter(spinnerArrayAdapter);
+                    counter++;
                 } else if (text.equals("Birla Institute of Technology and Science")) {
                     String[] array = {"Select College", "BITS Goa", "BITS Hyderabad", "BITS Pilani"};
                     ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
                     spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
                     college.setAdapter(spinnerArrayAdapter);
+                    counter++;
                 } else if (text.equals("Cochin University of Science and Technology")) {
                     String[] array = {"Select College", "Kuttanad Campus", "School Of Engineering,CUSAT"};
                     ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
                     spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
                     college.setAdapter(spinnerArrayAdapter);
+                    counter++;
                 } else if (text.equals("Indian Institute of Technology")) {
                     String[] array = {"Select College", "IIT Bhilai",
                             "IIT Bhubaneswar",
@@ -216,6 +260,7 @@ public class stud_profile_info_2 extends AppCompatActivity {
                     ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
                     spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
                     college.setAdapter(spinnerArrayAdapter);
+                    counter++;
                 } else if (text.equals("National Institute Of Technology")) {
                     String[] array = {"Select College", "NIT Agartala",
                             "NIT Allahabad ",
@@ -251,16 +296,19 @@ public class stud_profile_info_2 extends AppCompatActivity {
                     ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
                     spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
                     college.setAdapter(spinnerArrayAdapter);
+                    counter++;
                 }else if (text.equals("VIT University")) {
                     String[] array = {"Select College", "Amaravati Campus", "Bhopal Campus","Vellore Campus"};
                     ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
                     spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
                     college.setAdapter(spinnerArrayAdapter);
+                    counter++;
                 }else if (text.equals("SRM University")) {
                     String[] array = {"Select College", "Amaravati Campus", "Chennai Campus","Haryana Campus","Sikkim Campus"};
                     ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(stud_profile_info_2.this, android.R.layout.simple_spinner_item, array);
                     spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
                     college.setAdapter(spinnerArrayAdapter);
+                    counter++;
                 }
             }
 
@@ -270,6 +318,8 @@ public class stud_profile_info_2 extends AppCompatActivity {
 
             }
         });
+
+
 
     }
     @Override
