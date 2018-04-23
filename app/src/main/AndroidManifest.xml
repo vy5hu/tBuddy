@@ -19,7 +19,8 @@
         <activity android:name=".login" />
         <activity android:name=".studortea" />
         <activity android:name=".profileinfo" />
-        <activity android:name=".stud_profile_info_2"></activity>
+        <activity android:name=".stud_profile_info_2" />
+        <activity android:name=".stud_gender"></activity>
     </application>
 
 </manifest>

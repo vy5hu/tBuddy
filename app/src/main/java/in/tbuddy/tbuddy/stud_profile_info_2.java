@@ -1,5 +1,6 @@
 package in.tbuddy.tbuddy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,14 @@ public class stud_profile_info_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stud_profile_info_2);
+        findViewById(R.id.from_profile_info_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pq=new Intent(stud_profile_info_2.this, stud_gender.class);
+                startActivity(pq);
+                overridePendingTransition(R.anim.slidein_right, R.anim.slideout_left);
+            }
+        });
         final Spinner spinner = (Spinner) findViewById(R.id.spinner2);
         final Spinner college = findViewById(R.id.spinner1);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -263,4 +272,10 @@ public class stud_profile_info_2 extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slidein_left, R.anim.slideout_right);
+    }
+
 }

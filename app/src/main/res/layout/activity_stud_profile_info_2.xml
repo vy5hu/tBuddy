@@ -74,7 +74,7 @@
         app:srcCompat="@drawable/nvector" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/from_profile_info_2"
         android:layout_width="59dp"
         android:layout_height="54dp"
         android:layout_marginBottom="8dp"

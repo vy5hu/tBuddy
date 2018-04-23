@@ -19,11 +19,12 @@ public class profileinfo extends AppCompatActivity {
         findViewById(R.id.in_email).setAnimation(q);
         findViewById(R.id.in_num).setAnimation(p);
         findViewById(R.id.in_pass).setAnimation(q);
-        findViewById(R.id.imageButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.from_profile_info).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent to_stu_info_2=new Intent(profileinfo.this, stud_profile_info_2.class);
                 startActivity(to_stu_info_2);
+                overridePendingTransition(R.anim.slidein_right, R.anim.slideout_left);
             }
         });
 
