@@ -1,5 +1,6 @@
 package in.tbuddy.tbuddy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,9 @@ public class stud_gender extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(count==1 || count==2){
-                    Toast.makeText(stud_gender.this, "Work On Progress", Toast.LENGTH_SHORT).show();
+                    Intent stu_con=new Intent(stud_gender.this,stud_confirm.class);
+                    startActivity(stu_con);
+                    overridePendingTransition(R.anim.slidein_right, R.anim.slideout_left);
                 }
                 else{
                     Toast.makeText(stud_gender.this, "Select an Option", Toast.LENGTH_SHORT).show();

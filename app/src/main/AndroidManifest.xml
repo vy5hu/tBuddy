@@ -20,7 +20,8 @@
         <activity android:name=".studortea" />
         <activity android:name=".profileinfo" />
         <activity android:name=".stud_profile_info_2" />
-        <activity android:name=".stud_gender"></activity>
+        <activity android:name=".stud_gender" />
+        <activity android:name=".stud_confirm"></activity>
     </application>
 
 </manifest>
